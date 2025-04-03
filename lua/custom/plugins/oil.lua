@@ -4,6 +4,9 @@ return {
   ---@type oil.SetupOpts
   opts = {
     default_file_explorer = true,
+    view_options = {
+      show_hidden = true,
+    },
   },
   lazy = false,
   -- Optional dependencies
@@ -11,7 +14,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if prefer nvim-web-devicons
   keys = {
     {
-      '<leader>pv',
+      '\\',
       function()
         require('oil').open()
       end,
